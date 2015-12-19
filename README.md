@@ -14,11 +14,11 @@ What this code doesn't do:
   
 TODOs:
 
-- Make a function that returns reservable size in the buffer and pointer for the first location of this vector. Suggested declaration: 
+- Make a function that returns reservable size in the buffer and pointer for the first location of this vector. Suggested prototype: 
 
     `unsigned char ringbufferReserve(ringbuffer_t rb, unsigned char** v)`
 
-- Make a function that confirms previously reserved space. Suggested declaration:
+- Make a function that confirms previously reserved space. Suggested prototype:
 
     `bool ringbufferAddReserved(ringbuffer_t rb, unsigned char size)`
 
