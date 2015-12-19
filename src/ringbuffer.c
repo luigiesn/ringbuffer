@@ -16,7 +16,7 @@
  * this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "ringbuffer.h"
+#include "../include/ringbuffer.h"
 
 void ringbufferInit(ringbuffer_t* rb, unsigned char* buffer, unsigned char size) {
     rb->buffer = buffer;
