@@ -24,6 +24,9 @@
   * V 1.1 - Added ringbufferCount() 
   * 	Dec 27, 2015 
   * ----------------------------------
+  * V 1.2 - Added ringbufferEmpty() 
+  * 	Dec 27, 2015 
+  * ----------------------------------
   */
 
 #ifndef _RINGBUFFER_H_
@@ -80,6 +83,15 @@ void ringbufferRemove(ringbuffer_t* rb, unsigned char size);
  * @return Total free space in ring buffer
  */
 unsigned char ringbufferFree(ringbuffer_t* rb);
+
+/**
+ * @brief Verify if buffer is empty
+ *
+ * @param rbb Ring buffer pointer
+ *
+ * @return Returns "1" if buffer is empty, "0" if not
+ */
+unsigned char ringbufferEmpty(ringbuffer_t* rb);
 
 /**
  * @brief Get count of elements in the buffer

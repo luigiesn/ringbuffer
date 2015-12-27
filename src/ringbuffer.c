@@ -58,6 +58,13 @@ unsigned char ringbufferFree(ringbuffer_t* rb){
     return free;
 }
 
+unsigned char ringbufferEmpty(ringbuffer_t* rb){
+    if(rb->start == rb->end)
+        return 1;
+    
+    return 0;
+}
+
 unsigned char ringbufferCount(ringbuffer_t* rb){
     unsigned char cnt;
 
