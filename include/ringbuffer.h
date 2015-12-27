@@ -24,7 +24,7 @@
   * V 1.1 - Added ringbufferCount() 
   * 	Dec 27, 2015 
   * ----------------------------------
- /*
+  */
 
 #ifndef _RINGBUFFER_H_
 #define _RINGBUFFER_H_
