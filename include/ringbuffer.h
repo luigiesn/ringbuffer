@@ -17,14 +17,17 @@
  */
  
  /*
-  * ---------------------------------
-  * V 1.0 - Release - Dec 14, 2015 
-  * ---------------------------------
+  * ----------------------------------
+  * V 1.0 - Release
+  * 	Dec 14, 2015 
+  * ----------------------------------
+  * V 1.1 - Added ringbufferCount() 
+  * 	Dec 27, 2015 
+  * ----------------------------------
  /*
 
 #ifndef _RINGBUFFER_H_
 #define _RINGBUFFER_H_
-
 
 typedef struct ringbuffer ringbuffer_t; ///< @typedef Ring buffer type definition
 
@@ -70,13 +73,26 @@ void ringbufferAdd(ringbuffer_t* rb, unsigned char* buffer, unsigned char size);
 void ringbufferRemove(ringbuffer_t* rb, unsigned char size);
 
 /**
- *  @brief Calculate free space on ring buffer
+ * @brief Calculate free space on ring buffer
  *
  * @param rb Ring buffer pointer
  *
  * @return Total free space in ring buffer
  */
 unsigned char ringbufferFree(ringbuffer_t* rb);
+
+/**
+ * @brief Get count of elements in the buffer
+ *  
+ * Returns data amount on ring buffer can be read
+ *
+ * @param rb Ring buffer pointer
+ *
+ * @return Number of elements up to the last position in ring buffer vector
+ *
+ * @warning The return does not represent total count of elements
+ */
+unsigned char ringbufferCount(ringbuffer_t* rb);
 
 /**
  * @brief Get elements on ring buffer

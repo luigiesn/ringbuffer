@@ -58,6 +58,19 @@ unsigned char ringbufferFree(ringbuffer_t* rb){
     return free;
 }
 
+unsigned char ringbufferCount(ringbuffer_t* rb){
+    unsigned char cnt;
+
+    if(rb->end >= rb->start){
+        cnt = rb->end - rb->start + 1;
+    }
+    else{
+        cnt = rb->size - rb->start;
+    }
+	
+    return cnt;
+}
+
 unsigned char ringbufferGetElements(ringbuffer_t* rb, unsigned char** buffer){
     unsigned char num;
 
