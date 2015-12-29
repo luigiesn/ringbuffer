@@ -24,9 +24,6 @@
   * V 1.1 - Added ringbufferCount() 
   * 	Dec 27, 2015 
   * ----------------------------------
-  * V 1.2 - Added ringbufferEmpty() 
-  * 	Dec 27, 2015 
-  * ----------------------------------
   */
 
 #ifndef _RINGBUFFER_H_
@@ -96,13 +93,11 @@ unsigned char ringbufferEmpty(ringbuffer_t* rb);
 /**
  * @brief Get count of elements in the buffer
  *  
- * Returns data amount on ring buffer can be read
+ * Returns data amount on ring buffer
  *
  * @param rb Ring buffer pointer
  *
- * @return Number of elements up to the last position in ring buffer vector
- *
- * @warning The return does not represent total count of elements
+ * @return Number of elements in ring buffer vector
  */
 unsigned char ringbufferCount(ringbuffer_t* rb);
 
